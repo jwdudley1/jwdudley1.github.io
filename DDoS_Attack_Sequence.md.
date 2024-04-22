@@ -1,0 +1,19 @@
+```mermaid
+sequenceDiagram
+participant Attacker
+participant BotNet
+participant WebServer
+participant Firewall
+
+Attacker->>Botnet; Command/Instructions to initiate the DDoS attack
+BotNet->>WebServer; DDoS Attack Commences
+WebServer->>Firewall; High traffic or packet density detected
+Firewall->>WebServer; Analysis of the high traffic
+Firewall->>Attacker; IP Blocking
+
+Explanation: The attacker is the person or system that is sending the DDoS attack through commands in the botnet
+The botnet then receives commands from the attacker and launches the DDoS attack towards the target
+After that the WebServer will experience a surge of traffic this will trigger the defensive mechanisms within the webserver and firewall
+The firewall will detect the high traffic and will analyze the traffic to identify if there are any malicious patterns
+After the firewall analyzes the traffic the firewall will block the IP address of the attacker which will mitigate the DDoS attack.
+```
